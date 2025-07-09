@@ -17,7 +17,7 @@ Este proyecto es una API REST desarrollada en **Spring Boot** con autenticación
 La configuración por defecto se encuentra en `src/main/resources/application.properties`:
 
 ```properties
-spring.datasource.url=jdbc:mysql://localhost:3306/examdb
+spring.datasource.url=jdbc:mysql://localhost:3306/apiexamen
 spring.datasource.username=root
 spring.datasource.password=tu_contraseña
 jwt.secret=secreto123
