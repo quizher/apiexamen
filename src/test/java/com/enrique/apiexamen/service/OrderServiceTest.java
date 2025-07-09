@@ -31,7 +31,6 @@ class OrderServiceTest {
 
     @Test
     void testCreateOrder() {
-        // Arrange
         OrderRequest request = new OrderRequest();
         request.setOrigin("CDMX");
         request.setDestination("Monterrey");
@@ -51,10 +50,8 @@ class OrderServiceTest {
         when(orderRepository.save(order)).thenReturn(order);
         when(orderMapper.toResponse(order)).thenReturn(response);
 
-        // Act
         OrderResponse result = orderService.create(request);
 
-        // Assert
         assertEquals(OrderStatus.CREATED, result.getStatus());
         assertEquals("CDMX", result.getOrigin());
         verify(orderRepository, times(1)).save(order);
